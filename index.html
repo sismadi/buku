@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GenZ Bookstore</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f5f7fa;
+  color: #222;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.book-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.book-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.book-info h2 {
+  margin-top: 0;
+}
+
+.price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #0a7cff;
+}
+
+button {
+  background: #0a7cff;
+  border: none;
+  padding: 14px 24px;
+  font-size: 1rem;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #005fd1;
+}
+
+.preview {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  height: 420px;
+}
+
+.preview iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.download {
+  margin-top: 20px;
+  display: none;
+}
+
+.download a {
+  display: inline-block;
+  text-decoration: none;
+  background: #16a34a;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  color: #777;
+  font-size: 0.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+  <h1>📚 GenZ Bookstore</h1>
+  <p>Buku pendek, relevan, dan jujur untuk Gen Z</p>
+</header>
+
+<section class="book-card">
+
+  <div class="book-info">
+
+    <!-- DESKRIPSI -->
+    <div>
+      <h2>Judul Buku: <br>“Berani Hidup di Dunia Digital”</h2>
+      <p>
+        Buku ini membahas realita hidup Gen Z:  
+        karier digital, overthinking, uang, dan masa depan  
+        dengan bahasa ringan & relevan.
+      </p>
+
+      <ul>
+        <li>📄 120 halaman</li>
+        <li>🎯 Untuk Gen Z & Mahasiswa</li>
+        <li>📱 Mobile friendly</li>
+      </ul>
+
+      <div class="price">Rp 29.000</div>
+
+      <button onclick="simulatePayment()">Beli & Download</button>
+
+      <div class="download" id="downloadLink">
+        <p>✅ Pembayaran berhasil</p>
+        <a href="full-book.pdf" download>Download Buku (PDF)</a>
+      </div>
+    </div>
+
+    <!-- PREVIEW PDF -->
+    <div class="preview">
+      <iframe src="preview.pdf#toolbar=0&navpanes=0"></iframe>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2025 GenZ Bookstore · Semua hak cipta dilindungi
+</footer>
+
+</div>
+
+<script>
+function simulatePayment() {
+  alert("Simulasi pembayaran berhasil.\n(Integrasi Midtrans/Xendit bisa ditambahkan)");
+  document.getElementById("downloadLink").style.display = "block";
+}
+</script>
+
+</body>
+</html>
